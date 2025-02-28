@@ -4,7 +4,7 @@
 **Hybridbeam project name:**   0986_Neubau Logitiskzentrum Warehouse_Unna   
 **Position:** U10  
 **Tester Name:** Pawel Wojtanowicz  
-**Date:** 26.02.25  
+**Date:** 26-28.02.25  
 
 ---
 ## Instructions
@@ -37,7 +37,8 @@ The common data are as follows:
 | TC002 | Bending moment - final state |Verification of the correctness of bending moment value in final state | 1. Open app <br> 2. Enter valid data, see: common data above <br> 3. Click calculate button <br> 4. Extract the bending moment value |Mmax = 388,29kNm, Mmin = 189,72kNm (as in source file)|Mmax = 388,29kNm, Mmin = 189,72kNm |see: tc002-1|✅Pass| 
 | TC003 | Shear force - mounting state |Verification of the correctness of shear force value in mounting state | 1. Open app <br> 2. Enter valid data, see: common data above <br> 3. Click calculate button <br> 4. Extract the shear force value |Vmax = 153,44kN Vmin = 89,49kN (as in source file)|Vmax = 153,44kN Vmin = 89,49kN |see: tc003-1|✅Pass| 
 | TC004 | Shear force - final state |Verification of the correctness of shear force value in final state | 1. Open app <br> 2. Enter valid data, see: common data above <br> 3. Click calculate button <br> 4. Extract the shear force value |Vmax = 258,86kN Vmin = 126,5kN (as in source file)|Vmax = 258,86kN Vmin = 126,48kN |see: tc004-1|✅Pass| 
-| TC005 | Deformation - mounting state |Verification of the correctness of deformation value in mounting state | 1. Open app <br> 2. Enter valid data, see: common data above <br> 3. Click calculate button <br> 4. Extract the deformation value |wmax = 27,38mm (as in source file)|wmax = -4,16mm |see: tc005-1<br> value & graph direction <br> - to discuss with @WojciechRadkiewicz first|❌Fail| 
+| TC005 | Deformation - mounting state (default beam size) |Verification of the correctness of deformation value in mounting state | 1. Open app <br> 2. Enter valid data, see: common data above <br> 3. Click calculate button <br> 4. Extract the deformation value |wmax = 27,38mm (as in source file)|wmax = -4,16mm |see: tc005-1<br> - value=? & graph direction=? <br> - beacuse of the default beam size <br>- to discuss with @WojciechRadkiewicz first <br> - to test again after size of the beam is changed|❌Fail| 
+| TC006 | Deformation - mounting state (determined beam size) |Verification of the correctness of deformation value in mounting state | 1. Open app <br> 2. Enter valid data, see: common data above <br> 3. Enter valid Beam size (with valid dimentions - as in source file)<br> 4. Click calculate button <br> 5. Extract the deformation value |wmax = 27,38mm (as in source file)|wmax = -14.31mm |see: tc006-1, tc006-2<br> - value=? & graph direction=?  <br> - Q: is the source file result correct? is correct EI enetered? <br>- to discuss with @WojciechRadkiewicz first|❌Fail| 
 
 
 
@@ -56,6 +57,10 @@ The common data are as follows:
 ![alt text](img/tc004-1.png)
 - tc005-1  
 ![alt text](img/tc005-1.png)
+- tc006-1  
+![alt text](img/tc006-1.png)
+- tc006-2  
+![alt text](img/tc006-2.png)
 
 
 
